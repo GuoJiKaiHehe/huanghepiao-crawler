@@ -1,0 +1,60 @@
+{
+  "name": "huanghepiao-crawler",
+  "version": "1.0.0",
+  "description": "crawler",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie": "^0.3.1",
+    "egg": "^2.15.1",
+    "egg-cors": "^2.2.0",
+    "egg-mongoose": "^3.1.1",
+    "egg-scripts": "^2.11.0",
+    "form-data": "^2.3.3",
+    "html-tags": "^2.0.0",
+    "moment": "^2.24.0",
+    "superagent": "^4.1.0",
+    "superagent-cheerio": "^0.1.1",
+    "ua-parser-js": "^0.7.19",
+    "utility": "^1.15.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-huanghepiao-crawler",
+    "stop": "egg-scripts stop --title=egg-server-huanghepiao-crawler",
+    "dev": "egg-bin dev --port=7222",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "guojikai",
+  "license": "MIT"
+}
