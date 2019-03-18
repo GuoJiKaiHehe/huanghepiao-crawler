@@ -58,8 +58,8 @@ class HomeController extends Controller {
 		var href=dom_li_a.eq(i).attr("href");
 		obj.href=href.indexOf("http")==-1?(crawler_host+'/'+href):href
 		obj.star_id=href.match(/-\d+/g)[0].replace("-","");
-		var img_url=dom_li_a.eq(i).attr("src");
-		obj.img_url=href.indexOf("http")==-1?(crawler_host+'/'+img_url):img_url;
+		var img_url=dom_li_a.eq(i).find("img").attr("src");
+		obj.img_url=img_url.indexOf("http")==-1?(crawler_host+'/'+img_url):img_url;
 		result.push(obj);
 	}
   	ctx.success(result);

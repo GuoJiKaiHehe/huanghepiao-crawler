@@ -23,6 +23,11 @@ module.exports = app => {
   //商品
   router.get('/api/goods/getDetail/:goods_id', controller.goods.getDetail); //获取热门演出；
   router.get('/api/goods/getGoodsInfo/:goods_id', controller.goods.getGoodsInfo); //获取热门演出
+  router.get("/api/goods/getListByCateId",controller.goods.getListByCateId);
+  router.get("/api/goods/getShowAddrs",controller.goods.getShowAddrs)
+  router.get("/api/goods/getGoodsCates",controller.goods.getGoodsCates);
+  router.get("/api/goods/collect",controller.goods.collect);
+  router.get('/api/goods/showCollects',controller.goods.showCollects);
   //资讯相关；
 
   //场馆相关；
@@ -33,4 +38,16 @@ module.exports = app => {
   //订单相关；
   router.get("/api/order/getList",controller.order.getList); //获取订单列表；
   router.get("/api/order/getDetail",controller.order.getDetail); //获取订单列表；
+
+
+  //收货地址管理；
+  router.get("/api/address/getList",controller.address.getList); //获取收货地址
+  router.get("/api/address/add",controller.address.add);
+  router.get("/api/address/del",controller.address.del); //删除收货地址；
+  // router.get("/api/address/getCityCascade",controller.address.getCityCascade);
+
+  router.get("/api/address/getCityCascade",controller.address.getCityCascade);
 };
+
+
+
