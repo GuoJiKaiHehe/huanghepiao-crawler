@@ -104,10 +104,11 @@ class HomeController extends Controller {
   	console.log(dom_uls.length);
   	var result=[];
 	for(var i=0;i<dom_uls.length;i++){
-		var obj={};
+		
 		// console.log()
 		var dom_lis=  href=dom_uls.eq(i).find("li");
 		for(var j=0;j<dom_lis.length;j++){
+      var obj={};
 			var href = dom_lis.eq(j).find(".index_pro .products_kuang a").attr("href");
 			// console.log(href);
 			obj.href=href.indexOf("http")==-1?(crawler_host+'/'+href):href
@@ -158,12 +159,12 @@ class HomeController extends Controller {
   	var result=[];
   	for(var i=0;i<dom_uls.length;i++){
   		var dom_lis = dom_uls.eq(i).find("li");
-  		var obj={};
-  		for(var j=0;j<dom_lis.length;j++){
+      for(var j=0;j<dom_lis.length;j++){
+  		  var obj={};
   			var goods_href= dom_lis.eq(j).find(".products_kuang a").attr("href");
 			var aa =goods_href.match(/-\d+/);
 			if(aa){
-				obj.goods_href=aa[0].replace("-","");
+				obj.goods_id=aa[0].replace("-","");
 			}
 			obj.img_url=dom_lis.eq(j).find(".products_kuang a img").attr("src");
 
@@ -191,12 +192,12 @@ class HomeController extends Controller {
 	  	var result=[];
 	  	for(var i=0;i<dom_uls.length;i++){
 	  		var dom_lis = dom_uls.eq(i).find("li");
+        for(var j=0;j<dom_lis.length;j++){
 	  		var obj={};
-	  		for(var j=0;j<dom_lis.length;j++){
 	  			var goods_href= dom_lis.eq(j).find(".products_kuang a").attr("href");
 				var aa =goods_href.match(/-\d+/);
 				if(aa){
-					obj.goods_href=aa[0].replace("-","");
+					obj.goods_id=aa[0].replace("-","");
 				}
 				obj.img_url=dom_lis.eq(j).find(".products_kuang a img").attr("src");
 
@@ -224,12 +225,12 @@ class HomeController extends Controller {
 	  	var result=[];
 	  	for(var i=0;i<dom_uls.length;i++){
 	  		var dom_lis = dom_uls.eq(i).find("li");
+        for(var j=0;j<dom_lis.length;j++){
 	  		var obj={};
-	  		for(var j=0;j<dom_lis.length;j++){
 	  			var goods_href= dom_lis.eq(j).find(".products_kuang a").attr("href");
 				var aa =goods_href.match(/-\d+/);
 				if(aa){
-					obj.goods_href=aa[0].replace("-","");
+					obj.goods_id=aa[0].replace("-","");
 				}
 				obj.img_url=dom_lis.eq(j).find(".products_kuang a img").attr("src");
 
@@ -257,12 +258,12 @@ class HomeController extends Controller {
   	var result=[];
   	for(var i=0;i<dom_uls.length;i++){
   		var dom_lis = dom_uls.eq(i).find("li");
+      for(var j=0;j<dom_lis.length;j++){
   		var obj={};
-  		for(var j=0;j<dom_lis.length;j++){
   			var goods_href= dom_lis.eq(j).find(".products_kuang a").attr("href");
 			var aa =goods_href.match(/-\d+/);
 			if(aa){
-				obj.goods_href=aa[0].replace("-","");
+				obj.goods_id=aa[0].replace("-","");
 			}
 			obj.img_url=dom_lis.eq(j).find(".products_kuang a img").attr("src");
 
@@ -290,12 +291,12 @@ class HomeController extends Controller {
   	var result=[];
   	for(var i=0;i<dom_uls.length;i++){
   		var dom_lis = dom_uls.eq(i).find("li");
+      for(var j=0;j<dom_lis.length;j++){
   		var obj={};
-  		for(var j=0;j<dom_lis.length;j++){
   			var goods_href= dom_lis.eq(j).find(".products_kuang a").attr("href");
 			var aa =goods_href.match(/-\d+/);
 			if(aa){
-				obj.goods_href=aa[0].replace("-","");
+				obj.goods_id=aa[0].replace("-","");
 			}
 			obj.img_url=dom_lis.eq(j).find(".products_kuang a img").attr("src");
 
@@ -323,12 +324,12 @@ class HomeController extends Controller {
   	var result=[];
   	for(var i=0;i<dom_uls.length;i++){
   		var dom_lis = dom_uls.eq(i).find("li");
+      for(var j=0;j<dom_lis.length;j++){
   		var obj={};
-  		for(var j=0;j<dom_lis.length;j++){
   			var goods_href= dom_lis.eq(j).find(".products_kuang a").attr("href");
 			var aa =goods_href.match(/-\d+/);
 			if(aa){
-				obj.goods_href=aa[0].replace("-","");
+				obj.goods_id=aa[0].replace("-","");
 			}
 			obj.img_url=dom_lis.eq(j).find(".products_kuang a img").attr("src");
 
